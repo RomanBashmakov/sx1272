@@ -158,6 +158,8 @@ void SX1272LoRaInit( void )
 
     SX1272WriteBuffer( REG_LR_OPMODE, SX1272Regs + 1, 0x70 - 1 );
 
+    for(int i=0;i<1000;i++);
+
     // set the RF settings 
     SX1272LoRaSetRFFrequency( LoRaSettings.RFFrequency );
     SX1272LoRaSetPa20dBm( false );

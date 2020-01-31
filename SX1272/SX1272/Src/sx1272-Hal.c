@@ -107,14 +107,22 @@ void SX1272Read( uint8_t addr, uint8_t *data )
 
 void SX1272WriteBuffer( uint8_t addr, uint8_t *buffer, uint8_t size )
 {
-    uint8_t i;
 	uint8_t Address[]={addr|0x80 };
 
     //NSS = 0; Add
 	HAL_GPIO_WritePin(NSS_GPIO_Port, NSS_Pin, GPIO_PIN_RESET);
 
 	HAL_SPI_Transmit(&hspi1,&Address[0], 1, 1000);
+
+	//for (int i=0;i<10000;i++);
+	//HAL_GPIO_WritePin(NSS_GPIO_Port, NSS_Pin, GPIO_PIN_SET);
+
+	//for (int i=0;i<10000;i++);
+	//HAL_GPIO_WritePin(NSS_GPIO_Port, NSS_Pin, GPIO_PIN_RESET);
+
   	HAL_SPI_Transmit(&hspi1,&buffer[0], size, 1000);
+
+	for (int i=0;i<1000;i++);
 
     //NSS = 1; Add
 	HAL_GPIO_WritePin(NSS_GPIO_Port, NSS_Pin, GPIO_PIN_SET);

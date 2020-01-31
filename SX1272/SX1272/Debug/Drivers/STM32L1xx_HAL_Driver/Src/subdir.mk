@@ -60,7 +60,7 @@ Drivers/STM32L1xx_HAL_Driver/Src/%.o: ../Drivers/STM32L1xx_HAL_Driver/Src/%.c
 	@echo 'Building file: $<'
 	@echo 'Invoking: MCU GCC Compiler'
 	@echo $(PWD)
-	arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32L152xE -I"/Users/alexmacbook/Documents/myprog/sx1272/SX1272/SX1272/Inc" -I"/Users/alexmacbook/Documents/myprog/sx1272/SX1272/SX1272/Drivers/STM32L1xx_HAL_Driver/Inc" -I"/Users/alexmacbook/Documents/myprog/sx1272/SX1272/SX1272/Drivers/STM32L1xx_HAL_Driver/Inc/Legacy" -I"/Users/alexmacbook/Documents/myprog/sx1272/SX1272/SX1272/Drivers/CMSIS/Device/ST/STM32L1xx/Include" -I"/Users/alexmacbook/Documents/myprog/sx1272/SX1272/SX1272/Drivers/CMSIS/Include"  -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -o "$@" "$<"
+	arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DUSE_HAL_DRIVER -DSTM32L152xE -I"/home/roman/Documents/STM32 workspace/SX1272/SX1272/Inc" -I"/home/roman/Documents/STM32 workspace/SX1272/SX1272/Drivers/STM32L1xx_HAL_Driver/Inc" -I"/home/roman/Documents/STM32 workspace/SX1272/SX1272/Drivers/STM32L1xx_HAL_Driver/Inc/Legacy" -I"/home/roman/Documents/STM32 workspace/SX1272/SX1272/Drivers/CMSIS/Device/ST/STM32L1xx/Include" -I"/home/roman/Documents/STM32 workspace/SX1272/SX1272/Drivers/CMSIS/Include"  -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
