@@ -30,7 +30,6 @@ extern "C" {
 /* Includes ------------------------------------------------------------------*/
 #include "stm32l1xx_hal.h"
 
-
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -64,20 +63,20 @@ void Error_Handler(void);
 #define B1_GPIO_Port GPIOC
 #define SX1272RESET_Pin GPIO_PIN_0
 #define SX1272RESET_GPIO_Port GPIOA
-#define USART_TX_Pin GPIO_PIN_2
-#define USART_TX_GPIO_Port GPIOA
-#define USART_RX_Pin GPIO_PIN_3
-#define USART_RX_GPIO_Port GPIOA
+#define DIO0_Pin GPIO_PIN_2
+#define DIO0_GPIO_Port GPIOA
+#define DIO1_Pin GPIO_PIN_10
+#define DIO1_GPIO_Port GPIOA
 #define TMS_Pin GPIO_PIN_13
 #define TMS_GPIO_Port GPIOA
 #define TCK_Pin GPIO_PIN_14
 #define TCK_GPIO_Port GPIOA
 #define SWO_Pin GPIO_PIN_3
 #define SWO_GPIO_Port GPIOB
-#define RF_DIO3_PIN_Pin GPIO_PIN_4
-#define RF_DIO3_PIN_GPIO_Port GPIOB
-#define RF_DIO2_PIN_Pin GPIO_PIN_5
-#define RF_DIO2_PIN_GPIO_Port GPIOB
+#define DIO3_Pin GPIO_PIN_4
+#define DIO3_GPIO_Port GPIOB
+#define DIO2_Pin GPIO_PIN_5
+#define DIO2_GPIO_Port GPIOB
 #define NSS_Pin GPIO_PIN_6
 #define NSS_GPIO_Port GPIOB
 /* USER CODE BEGIN Private defines */

@@ -23,8 +23,7 @@ Src/stm32l1xx_hal_msp.o: ../Src/stm32l1xx_hal_msp.c \
  /home/roman/Documents/STM32\ workspace/SX1272/SX1272/Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_flash_ramfunc.h \
  /home/roman/Documents/STM32\ workspace/SX1272/SX1272/Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_pwr.h \
  /home/roman/Documents/STM32\ workspace/SX1272/SX1272/Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_pwr_ex.h \
- /home/roman/Documents/STM32\ workspace/SX1272/SX1272/Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_spi.h \
- /home/roman/Documents/STM32\ workspace/SX1272/SX1272/Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_uart.h
+ /home/roman/Documents/STM32\ workspace/SX1272/SX1272/Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_spi.h
 
 /home/roman/Documents/STM32\ workspace/SX1272/SX1272/Inc/main.h:
 
@@ -75,5 +74,3 @@ Src/stm32l1xx_hal_msp.o: ../Src/stm32l1xx_hal_msp.c \
 /home/roman/Documents/STM32\ workspace/SX1272/SX1272/Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_pwr_ex.h:
 
 /home/roman/Documents/STM32\ workspace/SX1272/SX1272/Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_spi.h:
-
-/home/roman/Documents/STM32\ workspace/SX1272/SX1272/Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_uart.h:

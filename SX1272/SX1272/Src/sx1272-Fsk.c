@@ -201,7 +201,7 @@ void SX1272FskSetOpMode( uint8_t opMode )
         if( antennaSwitchTxOn != antennaSwitchTxOnPrev )
         {
             antennaSwitchTxOnPrev = antennaSwitchTxOn;
-            RXTX( antennaSwitchTxOn ); // Antenna switch control
+            //RXTX( antennaSwitchTxOn ); // Antenna switch control// useless
         }
         SX1272->RegOpMode = ( SX1272->RegOpMode & RF_OPMODE_MASK ) | opMode;
 

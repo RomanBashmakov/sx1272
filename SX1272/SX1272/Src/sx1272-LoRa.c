@@ -366,14 +366,14 @@ uint32_t SX1272LoRaProcess( void )
         memset( RFBuffer, 0, ( size_t )RF_BUFFER_SIZE );
 
         PacketTimeout = LoRaSettings.RxPacketTimeout;
-        RxTimeoutTimer = GET_TICK_COUNT( );
+        //RxTimeoutTimer = GET_TICK_COUNT( );
         RFLRState = RFLR_STATE_RX_RUNNING;
         break;
     case RFLR_STATE_RX_RUNNING:
         
         if( DIO0 == 1 ) // RxDone
         {
-            RxTimeoutTimer = GET_TICK_COUNT( );
+            //RxTimeoutTimer = GET_TICK_COUNT( );
             if( LoRaSettings.FreqHopOn == true )
             {
                 SX1272Read( REG_LR_HOPCHANNEL, &SX1272LR->RegHopChannel );
@@ -385,7 +385,7 @@ uint32_t SX1272LoRaProcess( void )
         }
         if( DIO2 == 1 ) // FHSS Changed Channel
         {
-            RxTimeoutTimer = GET_TICK_COUNT( );
+            //RxTimeoutTimer = GET_TICK_COUNT( );
             if( LoRaSettings.FreqHopOn == true )
             {
                 SX1272Read( REG_LR_HOPCHANNEL, &SX1272LR->RegHopChannel );
@@ -397,13 +397,13 @@ uint32_t SX1272LoRaProcess( void )
             RxGain = SX1272LoRaReadRxGain( );
         }
 
-        if( LoRaSettings.RxSingleOn == true ) // Rx single mode
+        /*if( LoRaSettings.RxSingleOn == true ) // Rx single mode
         {
             if( ( GET_TICK_COUNT( ) - RxTimeoutTimer ) > PacketTimeout )
             {
                 RFLRState = RFLR_STATE_RX_TIMEOUT;
             }
-        }
+        }*/
         break;
     case RFLR_STATE_RX_DONE:
         SX1272Read( REG_LR_IRQFLAGS, &SX1272LR->RegIrqFlags );
@@ -582,6 +582,10 @@ uint32_t SX1272LoRaProcess( void )
 
         RFLRState = RFLR_STATE_IDLE;
         result = RF_TX_DONE;
+
+        //My code
+        RFLRState = RFLR_STATE_TX_INIT;
+
         break;
     case RFLR_STATE_CAD_INIT:    
         SX1272LoRaSetOpMode( RFLR_OPMODE_STANDBY );

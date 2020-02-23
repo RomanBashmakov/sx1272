@@ -281,7 +281,7 @@ uint32_t SX1272Process( void )
 {
     if( LoRaOn == false )
     {
-        return SX1272FskProcess( );
+    	return SX1272LoRaProcess( );//return SX1272FskProcess( );
     }
     else
     {

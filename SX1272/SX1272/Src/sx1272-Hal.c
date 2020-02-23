@@ -155,22 +155,22 @@ void SX1272ReadFifo( uint8_t *buffer, uint8_t size )
 
 uint8_t SX1272ReadDio0( void )
 {
-    //return GPIO_ReadInputDataBit( DIO0_IOPORT, DIO0_PIN );
+	return HAL_GPIO_ReadPin(DIO0_GPIO_Port, DIO0_Pin);//return GPIO_ReadInputDataBit( DIO0_IOPORT, DIO0_PIN );
 }
 
 uint8_t SX1272ReadDio1( void )
 {
-    //return GPIO_ReadInputDataBit( DIO1_IOPORT, DIO1_PIN );
+	return HAL_GPIO_ReadPin(DIO1_GPIO_Port, DIO1_Pin);//return GPIO_ReadInputDataBit( DIO1_IOPORT, DIO1_PIN );
 }
 
 uint8_t SX1272ReadDio2( void )
 {
-    //return GPIO_ReadInputDataBit( DIO2_IOPORT, DIO2_PIN );
+	return HAL_GPIO_ReadPin(DIO2_GPIO_Port, DIO2_Pin);//return GPIO_ReadInputDataBit( DIO2_IOPORT, DIO2_PIN );
 }
 
 uint8_t SX1272ReadDio3( void )
 {
-    //return IoePinGet( RF_DIO3_PIN );
+	return HAL_GPIO_ReadPin(DIO3_GPIO_Port, DIO3_Pin);//return IoePinGet( RF_DIO3_PIN );
 }
 
 uint8_t SX1272ReadDio4( void )
